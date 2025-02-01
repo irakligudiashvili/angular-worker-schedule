@@ -1,0 +1,133 @@
+.job-title{
+    font-weight: bold;
+    text-indent: 15px;
+}
+
+.table_container{
+    width: 95%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+table th {
+    height: 30px;
+}
+
+table td {
+    height: 50px;
+    width: 160px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    padding: 0 5px;
+}
+
+.shift{
+    border-radius: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.shift_controls{
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 85%;
+    margin-left: 10px;
+}
+
+.shift_icon{
+    height: 25px;
+    width: auto;
+
+    position: absolute;
+    left: 10px;
+}
+
+.shift_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+.delete{
+    color: red; 
+}
+
+.approve{
+    color: green;
+}
+
+.shift_btn:hover {
+    opacity: 1;
+}
+
+.shift--morning{
+    background-color: #c1fdb5;
+}
+
+.shift--night{
+    background-color: #281750;
+    color: white;
+}
+
+.unapproved{
+    background-color: #FCE5CD;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.controls_btn{
+    height: 40px;
+    border: none;
+    width: 180px;
+    border-radius: 30px;
+    opacity: 1;
+
+    font-weight: bold;
+    background-color: #333333;
+    color: #fff;
+}
+
+.controls_btn:hover{
+    opacity: 0.85;
+}
+
+.schedule_form{
+    margin: auto;
+    width: min(90%, 400px);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+
+
+    padding-bottom: 50px;
+    margin-top: 20px;
+    border-radius: 20px;
+
+    gap: 10px;
+    box-shadow: 0px 5px 10px 0px gray;
+}
+
+.schedule_form_title{
+    font-weight: bold;
+    background-color: #01B6AE;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}

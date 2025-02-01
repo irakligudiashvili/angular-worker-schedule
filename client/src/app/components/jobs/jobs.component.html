@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="body">
+    <div class="job-container">
+        <h1>{{'JOB_LIST' | translate}}</h1>
+        <table>
+            <tr *ngFor="let job of jobOptions">
+                <td>{{job.title}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteJob(job)">{{'JOB_DEL' | translate}}</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <form class="form" [formGroup]="jobForm" (ngSubmit)="addNewJob()">
+        <h1>{{'JOB_ADD' | translate}}</h1>
+
+        <input type="text" name="title" id="" formControlName="title">
+
+        <div *ngIf="jobForm.get('title')?.invalid && jobForm.get('title')?.touched">
+            <p class="text-danger">{{'TITLE_REQ' | translate}}</p>
+        </div>
+
+        <button class="btn btn-primary">{{'JOB_ADD2' | translate}}</button>
+
+    </form>
+    <!-- <br>
+    <button (click)="this.userService.switchLanguage('en')">English</button>
+    <button (click)="this.userService.switchLanguage('de')">Deutsch</button>
+    <button (click)="this.userService.switchLanguage('fr')">Français</button> -->
+</div>

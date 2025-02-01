@@ -1,0 +1,83 @@
+<div class="body">
+  <div class="body-secondary">
+      <div class="form-container">
+        <h1>{{'CREATE_ACC' | translate}}</h1>
+        <p>{{'LOGIN_LABEL' | translate}} <a href="login" (click)="goToLogin()">{{'LOGIN' | translate}}</a></p>
+
+        <form [formGroup]="registrationForm" (ngSubmit)="Register()">
+          <div>
+            <label>
+              <input type="text" id="firstName" formControlName="firstName" required>
+              <span>{{'FIRST_NAME' | translate}}</span>
+              
+              <div *ngIf="registrationForm.get('firstName')?.invalid && registrationForm.get('firstName')?.touched">
+                <p *ngIf="registrationForm.get('firstName')?.errors?.['required']" class="text-danger">{{'FN_REQ' | translate}}</p>
+              </div>
+            </label>
+
+            <label>
+              <input type="text" id="lastName" formControlName="lastName" required>
+              <span>{{'LAST_NAME' | translate}}</span>
+
+              <div *ngIf="registrationForm.get('lastName')?.invalid && registrationForm.get('lastName')?.touched">
+                <p *ngIf="registrationForm.get('lastName')?.errors?.['required']" class="text-danger">{{'LN_REQ' | translate}}</p>
+              </div>
+            </label>
+          </div>
+
+          <label>
+            <input type="text" id="email" formControlName="email" required>
+            <span>{{'EMAIL' | translate}}</span>
+
+            <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched">
+              <p *ngIf="registrationForm.get('email')?.errors?.['required']" class="text-danger">{{'EMAIL_REQ' | translate}}</p>
+              <p *ngIf="registrationForm.get('email')?.errors?.['email']" class="text-danger">{{'EMAIL_INV' | translate}}</p>
+            </div>
+          </label>
+
+          <label>
+            <input type="password" id="password" formControlName="password" required>
+            <span>{{'PASSWORD' | translate}}</span>
+            
+            <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched">
+              <p *ngIf="registrationForm.get('password')?.errors?.['required']" class="text-danger">{{'PASSWORD_REQ' | translate}}</p>
+              <p *ngIf="registrationForm.get('password')?.errors?.['minlength']" class="text-danger">{{'PASSWORD_INV' | translate}}</p>
+            </div>
+          </label>
+
+          <label>
+            <input type="password" id="confirmPassword" formControlName="confirmPassword" required>
+            <span>{{'CONFIRM_PASSWORD' | translate}}</span>
+
+            <div *ngIf="registrationForm.errors?.['passwordMismatch'] && registrationForm.get('confirmPassword')?.touched">
+              <p class="text-danger">{{'PASSWORD_MATCH' | translate}}</p>
+            </div>
+          </label>
+
+          <select *appUnless="jobOptions.length==0" class="button" id="jobId" formControlName="jobId" required>
+            <option [ngValue]="null" disabled>{{'JOB_SELECT' | translate}}</option>
+            <option *ngFor="let job of jobOptions" [ngValue]="job">{{job.title}}</option>
+          </select>
+          <div *ngIf="registrationForm.get('jobId')?.invalid && registrationForm.get('jobId')?.touched">
+            <p class="text-danger">{{'JOB_REQ' | translate}}</p>
+          </div>
+          <div *ngIf="jobOptions.length == 0">
+            <p>{{'JOB_ERR' | translate}}</p>
+          </div>
+
+          <button type="submit">{{'CREATE_ACC' | translate}}</button>
+        </form>
+        
+        <br>
+        <div>
+          <button class="langbtn" (click)="this.userService.switchLanguage('en')">English</button>
+          <button class="langbtn" (click)="this.userService.switchLanguage('de')">Deutsch</button>
+          <button class="langbtn" (click)="this.userService.switchLanguage('fr')">Français</button>
+        </div>
+      </div>
+
+      <div class="image-container">
+        <img src="../../../assets/images/background-secondary.jpg">
+      </div>
+  </div>
+</div>

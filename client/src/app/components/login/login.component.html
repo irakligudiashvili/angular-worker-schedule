@@ -1,0 +1,48 @@
+<div class="body">
+  <div class="form-container" [formGroup]="loginForm" (ngSubmit)="Login()">
+
+    <h1>{{ 'LOGIN' | translate }}</h1>
+    <p>{{ 'LOGIN_MESSAGE' | translate }}</p>
+
+    <form>
+      <div class="input-container">
+        <div class="error-div" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+          <p *ngIf="loginForm.get('email')?.errors?.['required']">{{'EMAIL_REQ' | translate}}</p>
+          <p *ngIf="loginForm.get('email')?.errors?.['email']">{{'EMAIL_INV' | translate}}</p>
+        </div>
+
+        <input placeholder="{{'EMAIL' | translate}}" type="email" id="email" formControlName="email" required>
+        <img class="input-icon" src="../../../assets/icons/email.svg" />
+      </div>
+
+      <div class="input-container">
+        <div class="error-div" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+          <p *ngIf="loginForm.get('password')?.errors?.['required']">{{'PASSWORD_REQ' | translate}}</p>
+          <p *ngIf="loginForm.get('password')?.errors?.['minlength']">{{'PASSWORD_INV' | translate}}</p>
+        </div>
+        
+        <input placeholder="{{'PASSWORD' | translate}}" type="password" id="password" formControlName="password" required>
+        <img class="input-icon" src="../../../assets/icons/lock.svg" />
+      </div>
+
+      
+      <button type="submit">{{ 'LOGIN' | translate }}</button>
+    </form>
+
+    <div>
+      <p>{{"REGISTER_LABEL" | translate }} <a (click)="goToRegister()">{{ 'REGISTER' | translate }}</a></p>
+      <!-- <p>Change language</p> -->
+       <!-- <select>
+          <option (click)="switchLanguage('en')">English</option>
+          <option (click)="switchLanguage('de')">German</option>
+          <option (click)="switchLanguage('de')">French</option>
+       </select> -->
+
+       
+    <button class="langbtn" (click)="this.userService.switchLanguage('en')">English</button>
+    <button class="langbtn" (click)="this.userService.switchLanguage('de')">Deutsch</button>
+    <button class="langbtn" (click)="this.userService.switchLanguage('fr')">Français</button>
+    </div>
+
+  </div>
+</div>

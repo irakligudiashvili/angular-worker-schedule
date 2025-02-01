@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <h2 class="navbar-title">Shift Controller</h2>
+    
+    <div class="navbar-btn_container">
+        <button class="btn btn-info" (click)="this.userService.switchLanguage('en')">EN</button>
+        <button class="btn btn-info" (click)="this.userService.switchLanguage('de')">DE</button>
+        <button class="btn btn-info" (click)="this.userService.switchLanguage('fr')">FR</button>
+        <button class="btn btn-primary" *ngIf="loggedIn" (click)="this.userService.goToSchedule()">{{'BTN_SCHEDULE' | translate}}</button>
+        <button class="btn btn-primary" *ngIf="loggedIn && this.userService.isAdmin()" (click)="this.userService.goToJobs()">{{'BTN_JOBS' | translate}}</button>
+        <button class="btn btn-primary" *ngIf="loggedIn" (click)="this.userService.goToWorker()">{{'BTN_WORKER' | translate}}</button>
+        <button class="btn btn-primary" *ngIf="loggedIn && this.userService.isAdmin()" (click)="this.userService.goToAdmin()">{{'BTN_ADMIN' | translate}}</button>
+
+        <button *ngIf="loggedIn" (click)="logOut()" class="btn btn-danger">{{'LOGOUT' | translate}}</button>
+    </div>
+</nav>

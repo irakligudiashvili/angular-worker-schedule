@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<h1>Admin Dashboard</h1>
+<br>
+<button class="btn btn-primary" (click)="this.userService.goToSchedule()">{{'BTN_SCHEDULE' | translate}}</button><br>
+<button class="btn btn-primary" (click)="this.userService.goToJobs()">{{'BTN_JOBS' | translate}}</button><br>
+<button class="btn btn-primary" (click)="this.userService.goToWorker()">{{'BTN_WORKER' | translate}}</button><br>
+<!-- <br>
+<button (click)="this.userService.switchLanguage('en')">English</button>
+<button (click)="this.userService.switchLanguage('de')">Deutsch</button>
+<button (click)="this.userService.switchLanguage('fr')">Français</button> -->

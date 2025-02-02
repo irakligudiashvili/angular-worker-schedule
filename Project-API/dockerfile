@@ -8,7 +8,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 
 # Copy the Schedule.csproj file
-COPY ["Schedule/Schedule.csproj", "./"]
+COPY ["Schedule/Schedule.csproj", "Schedule/"]
 RUN dotnet restore "Schedule/Schedule.csproj"
 
 # Copy the rest of the files

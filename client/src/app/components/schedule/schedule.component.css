@@ -32,7 +32,7 @@ form button{
 }
 
 .main{
-    width: 100%;
+    width: 95%;
 }
 
 .job-title{
@@ -51,6 +51,10 @@ table th {
     height: 30px;
 }
 
+table th {
+    border: 1px solid #808080;
+}
+
 table td {
     height: 50px;
     width: 160px;
@@ -58,6 +62,8 @@ table td {
     padding: 0;
     vertical-align: middle;
     padding: 0 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .shift{
@@ -67,6 +73,9 @@ table td {
     align-items: center;
     justify-content: center;
     position: relative;
+    font-size: 0.75rem;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
 }
 
 .shift_controls{
@@ -79,7 +88,7 @@ table td {
 }
 
 .shift_icon{
-    height: 25px;
+    height: 15px;
     width: auto;
 
     position: absolute;
@@ -97,10 +106,14 @@ table td {
 
 .delete{
     color: red; 
+    font-size: 0.8rem;
+    margin-right: 5px;
 }
 
 .approve{
     color: green;
+    font-size: 0.8rem;
+    margin-right: 5px;
 }
 
 .shift_btn:hover {

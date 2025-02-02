@@ -20,15 +20,11 @@
                 <td>{{getOccupationName(user.jobId)}}</td>
                 <td>
                     {{getRoleName(user.roleId)}}
-                    <button *ngIf="user.roleId==1" class="btn btn-info" (click)="revokeAdmin(user)">{{'ADMIN_REVOKE' | translate}}</button>
+                    <button *ngIf="user.roleId==1 && user.id != this.userService.getUserId()" class="btn btn-info" (click)="revokeAdmin(user)">{{'ADMIN_REVOKE' | translate}}</button>
                     <button *ngIf="user.roleId==2" class="btn btn-info" (click)="giveAdmin(user)">{{'ADMIN_GIVE' | translate}}</button>
                 </td>
                 <td><button class="btn btn-danger" (click)="deleteUser(user.id)">{{'DELETE' | translate}}</button></td>
             </tr>
         </tbody>
     </table>
-    <!-- <br>
-    <button (click)="this.userService.switchLanguage('en')">English</button>
-    <button (click)="this.userService.switchLanguage('de')">Deutsch</button>
-    <button (click)="this.userService.switchLanguage('fr')">Français</button> -->
 </div>

@@ -6147,11 +6147,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Me\\Dev\\angular\\uni\\AngularProject-Final-main\\AngularProject-Final-main\\Project-API\\Schedule\\Schedule.csproj",
+      "projectUniqueName": "C:\\Users\\lowhi\\Documents\\GitHub\\angular-worker-schedule\\Project-API\\Schedule\\Schedule.csproj",
       "projectName": "Schedule",
-      "projectPath": "C:\\Me\\Dev\\angular\\uni\\AngularProject-Final-main\\AngularProject-Final-main\\Project-API\\Schedule\\Schedule.csproj",
+      "projectPath": "C:\\Users\\lowhi\\Documents\\GitHub\\angular-worker-schedule\\Project-API\\Schedule\\Schedule.csproj",
       "packagesPath": "C:\\Users\\lowhi\\.nuget\\packages\\",
-      "outputPath": "C:\\Me\\Dev\\angular\\uni\\AngularProject-Final-main\\AngularProject-Final-main\\Project-API\\Schedule\\obj\\",
+      "outputPath": "C:\\Users\\lowhi\\Documents\\GitHub\\angular-worker-schedule\\Project-API\\Schedule\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6172,14 +6172,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Me\\Dev\\angular\\uni\\AngularProject-Final-main\\AngularProject-Final-main\\Project-API\\Application\\Application.csproj": {
-              "projectPath": "C:\\Me\\Dev\\angular\\uni\\AngularProject-Final-main\\AngularProject-Final-main\\Project-API\\Application\\Application.csproj"
+            "C:\\Users\\lowhi\\Documents\\GitHub\\angular-worker-schedule\\Project-API\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\lowhi\\Documents\\GitHub\\angular-worker-schedule\\Project-API\\Application\\Application.csproj"
             },
-            "C:\\Me\\Dev\\angular\\uni\\AngularProject-Final-main\\AngularProject-Final-main\\Project-API\\Business\\Business.csproj": {
-              "projectPath": "C:\\Me\\Dev\\angular\\uni\\AngularProject-Final-main\\AngularProject-Final-main\\Project-API\\Business\\Business.csproj"
+            "C:\\Users\\lowhi\\Documents\\GitHub\\angular-worker-schedule\\Project-API\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\lowhi\\Documents\\GitHub\\angular-worker-schedule\\Project-API\\Business\\Business.csproj"
             },
-            "C:\\Me\\Dev\\angular\\uni\\AngularProject-Final-main\\AngularProject-Final-main\\Project-API\\Database\\Database.csproj": {
-              "projectPath": "C:\\Me\\Dev\\angular\\uni\\AngularProject-Final-main\\AngularProject-Final-main\\Project-API\\Database\\Database.csproj"
+            "C:\\Users\\lowhi\\Documents\\GitHub\\angular-worker-schedule\\Project-API\\Database\\Database.csproj": {
+              "projectPath": "C:\\Users\\lowhi\\Documents\\GitHub\\angular-worker-schedule\\Project-API\\Database\\Database.csproj"
             }
           }
         }
@@ -6188,11 +6188,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -6262,17 +6257,5 @@
         "runtimeIdentifierGraphPath": "C:\\Users\\lowhi\\scoop\\apps\\dotnet6-sdk\\current\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.IdentityModel.Tokens.Jwt' 6.10.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "libraryId": "System.IdentityModel.Tokens.Jwt",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

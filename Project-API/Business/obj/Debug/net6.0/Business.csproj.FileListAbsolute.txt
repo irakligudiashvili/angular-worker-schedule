@@ -180,3 +180,17 @@ C:\Me\Dev\angular\uni\AngularProject-Final-main\AngularProject-Final-main\Projec
 C:\Me\Dev\angular\uni\AngularProject-Final-main\AngularProject-Final-main\Project-API\Business\obj\Debug\net6.0\Business.pdb
 C:\Me\Dev\angular\uni\AngularProject-Final-main\AngularProject-Final-main\Project-API\Business\obj\Debug\net6.0\Business.genruntimeconfig.cache
 C:\Me\Dev\angular\uni\AngularProject-Final-main\AngularProject-Final-main\Project-API\Business\obj\Debug\net6.0\ref\Business.dll
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\bin\Debug\net6.0\Business.deps.json
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\bin\Debug\net6.0\Business.runtimeconfig.json
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\bin\Debug\net6.0\Business.dll
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\bin\Debug\net6.0\Business.pdb
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\obj\Debug\net6.0\Business.csproj.AssemblyReference.cache
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\obj\Debug\net6.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\obj\Debug\net6.0\Business.AssemblyInfoInputs.cache
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\obj\Debug\net6.0\Business.AssemblyInfo.cs
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\obj\Debug\net6.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\obj\Debug\net6.0\Business.dll
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\obj\Debug\net6.0\refint\Business.dll
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\obj\Debug\net6.0\Business.pdb
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\obj\Debug\net6.0\Business.genruntimeconfig.cache
+C:\Users\lowhi\Documents\GitHub\angular-worker-schedule\Project-API\Business\obj\Debug\net6.0\ref\Business.dll

@@ -65,15 +65,20 @@
             <p>{{'JOB_ERR' | translate}}</p>
           </div>
 
-          <button type="submit">{{'CREATE_ACC' | translate}}</button>
+          <div class="language-container">
+            <button type="submit">{{'CREATE_ACC' | translate}}</button>
+            
+            <div>
+              <p>Change language</p>
+      
+              <select (change)="switchLanguage($event)">
+                <option value="en">En</option>
+                <option value="de">De</option>
+                <option value="fr">Fr</option>
+              </select>
+            </div>
+          </div>
         </form>
-        
-        <br>
-        <div>
-          <button class="langbtn" (click)="this.userService.switchLanguage('en')">English</button>
-          <button class="langbtn" (click)="this.userService.switchLanguage('de')">Deutsch</button>
-          <button class="langbtn" (click)="this.userService.switchLanguage('fr')">Français</button>
-        </div>
       </div>
 
       <div class="image-container">

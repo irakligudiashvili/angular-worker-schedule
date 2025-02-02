@@ -32,11 +32,16 @@ export class ScheduleComponent implements OnInit {
   organizedSchedules: { [date: string]: { [jobId: number]: { morning: Schedule[], night: Schedule[] } } } = {};
   currentWeek: moment.Moment = moment();
 
+  currentDate:  Date = new Date();
+  selectedDate: Date | null = null;
+  days: number[] = [];
+
   ngOnInit(): void {
     this.generateCurrentWeek();
     this.getJobs();
     this.getSchedules();
     this.createForm();
+    this.generateCalendar();
   }
 
   constructor(
@@ -46,6 +51,28 @@ export class ScheduleComponent implements OnInit {
     private scheduleService: ScheduleService,
     private toastr:ToastrService
   ){}
+
+  generateCalendar(){
+    const year = this.currentDate.getFullYear();
+    const month = this.currentDate.getMonth();
+
+    const firstDay = new Date(year, month, 0).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    this.days = new Array(firstDay).fill(null).concat([...Array(daysInMonth).keys()].map(d => d + 1));
+  }
+
+  changeMonth(offset: number){
+    this.currentDate.setMonth(this.currentDate.getMonth() + offset);
+    this.generateCalendar();
+  }
+
+  selectDate(day: number | null){
+    if(day !== null){
+      this.selectedDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth(), day);
+      console.log(this.selectedDate);
+    }
+  }
 
   generateCurrentWeek(): void {
     const startOfWeek = this.currentWeek.clone().startOf('isoWeek');
@@ -126,17 +153,22 @@ export class ScheduleComponent implements OnInit {
 
   createForm(): void {
     this.requestForm = this.fb.group({
-      requestDate: [null,Validators.required],
       shift: ["",Validators.required]
     });
   }
 
   requestSchedule(): void {
-    if (this.requestForm.valid) {
-      const requestDate=this.requestForm.get("requestDate")?.value;
+    if (this.requestForm.valid && this.selectedDate != null) {
+      // const requestDate=this.requestForm.get("requestDate")?.value;
+      const requestDate = this.selectedDate;
+      console.log(requestDate);
       const shift=this.requestForm.get("shift")?.value;
-      let startTime:Date=new Date(requestDate);
-      let endTime:Date=new Date(requestDate);
+      let startTime : Date = new Date();
+      let endTime : Date = new Date();
+      if(requestDate != null){
+        startTime = new Date(requestDate);
+        endTime = new Date(requestDate);
+      }
       if(shift=="Morning"){
         startTime.setHours(12);
         startTime.setMinutes(0);

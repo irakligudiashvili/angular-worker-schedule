@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R2n2ABWyhIw4UOJWT1jq5EU7AtIrrZNTDBNkQZ/9VyIe2TKy1JGDDyrF5/TwVKkVSFjCjFWbm3RGwmAnMc/Tjg==",
+  "dgSpecHash": "ad1xuAhAKCxb3SebvF6gsp+IbCE217EfP4fblsUsE9kp8zyxDFmxFHVFJ7ggZnVoEc/uU3pQ0S/bzi/78dCbhg==",
   "success": true,
-  "projectFilePath": "C:\\Me\\Dev\\angular\\uni\\AngularProject-Final-main\\AngularProject-Final-main\\Project-API\\Schedule\\Schedule.csproj",
+  "projectFilePath": "C:\\Users\\lowhi\\Documents\\GitHub\\angular-worker-schedule\\Project-API\\Schedule\\Schedule.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lowhi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lowhi\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

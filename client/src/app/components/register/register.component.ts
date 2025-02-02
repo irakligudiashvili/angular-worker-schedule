@@ -30,6 +30,11 @@ export class RegisterComponent {
     this.fetchJobOptions();
   }
 
+  switchLanguage(event: Event){
+    const selectedLanguage = (event.target as HTMLSelectElement).value;
+    this.userService.switchLanguage(selectedLanguage);
+  }
+
   createForm(): void {
     this.registrationForm = this.fb.group({
       firstName: ['', Validators.required],

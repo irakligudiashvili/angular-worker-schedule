@@ -25,6 +25,11 @@ export class LoginComponent implements OnInit{
   ngOnInit(): void {
     this.createForm();
   }
+
+  switchLanguage(event: Event){
+    const selectedLanguage = (event.target as HTMLSelectElement).value;
+    this.userService.switchLanguage(selectedLanguage);
+  }
   
   createForm(){
     this.loginForm = this.fb.group({

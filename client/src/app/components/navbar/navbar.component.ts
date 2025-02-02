@@ -33,4 +33,9 @@ export class NavbarComponent {
   showLogOut(){
     this.toastr.warning("You are now logged out");
   }
+
+  switchLanguage(event: Event){
+    const selectedLanguage = (event.target as HTMLSelectElement).value;
+    this.userService.switchLanguage(selectedLanguage);
+  }
 }

@@ -21,3 +21,40 @@
     align-items: center;
     gap: 15px;
 }
+
+.language-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .language-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 25px;
+  }
+  
+  .language-container p{
+    vertical-align: middle;
+    line-height: normal;
+  }
+  
+  .language-container select{
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.25rem;
+    width: 50px;
+    padding: 0;
+  }
+  
+  .language-container select:focus{
+    outline: none;
+  }
+  
+  .language-container option{
+    border: none;
+    color: #000;
+  }

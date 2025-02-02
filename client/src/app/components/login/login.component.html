@@ -29,19 +29,19 @@
       <button type="submit">{{ 'LOGIN' | translate }}</button>
     </form>
 
-    <div>
+    
+    <div class="language-container">
       <p>{{"REGISTER_LABEL" | translate }} <a (click)="goToRegister()">{{ 'REGISTER' | translate }}</a></p>
-      <!-- <p>Change language</p> -->
-       <!-- <select>
-          <option (click)="switchLanguage('en')">English</option>
-          <option (click)="switchLanguage('de')">German</option>
-          <option (click)="switchLanguage('de')">French</option>
-       </select> -->
+      
+      <div>
+        <p>Change language</p>
 
-       
-    <button class="langbtn" (click)="this.userService.switchLanguage('en')">English</button>
-    <button class="langbtn" (click)="this.userService.switchLanguage('de')">Deutsch</button>
-    <button class="langbtn" (click)="this.userService.switchLanguage('fr')">Français</button>
+        <select (change)="switchLanguage($event)">
+          <option value="en">En</option>
+          <option value="de">De</option>
+          <option value="fr">Fr</option>
+        </select>
+      </div>
     </div>
 
   </div>

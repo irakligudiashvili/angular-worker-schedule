@@ -2,3 +2,7 @@
 *{
     font-family: "Inter", serif;
 }
+
+body {
+    min-height: 100vh;
+}

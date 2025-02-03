@@ -11,7 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class UserService {
 
-  private apiUrl = 'https://angular-worker-schedule.onrender.comapi/user';
+  private apiUrl = 'https://angular-worker-schedule.onrender.com/api/user';
   private apiUrlAdmin = 'https://angular-worker-schedule.onrender.com/api/admin';
 
   private jobTitles: { [key: number]: string} = {};

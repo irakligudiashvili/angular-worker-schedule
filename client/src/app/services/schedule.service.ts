@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class ScheduleService {
-private apiUrl = 'https://angular-worker-schedule.onrender.com/api/user';
-private apiUrlAdmin = 'https://angular-worker-schedule.onrender.com/api/Admin';
-private apiUrlWorker = 'https://angular-worker-schedule.onrender.com/api/Worker';
+private apiUrl = 'https://localhost:44330/api/user';
+private apiUrlAdmin = 'https://localhost:44330/api/Admin';
+private apiUrlWorker = 'https://localhost:44330/api/Worker';
 
   constructor(
     private http: HttpClient,

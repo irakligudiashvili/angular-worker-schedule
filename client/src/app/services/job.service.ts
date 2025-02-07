@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class JobService {
-  private apiUrl = 'https://angular-worker-schedule.onrender.com/api/Admin';
+  private apiUrl = 'https://localhost:44330/api/Admin';
 
   constructor(
     private http:HttpClient,

@@ -63,7 +63,7 @@ export class ScheduleComponent implements OnInit {
   }
 
   changeMonth(offset: number){
-    this.currentDate.setMonth(this.currentDate.getMonth() + offset);
+    this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() + offset, 1);
     this.generateCalendar();
   }
 

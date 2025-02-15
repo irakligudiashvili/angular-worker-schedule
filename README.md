@@ -72,7 +72,7 @@ dotnet ef database update   # Apply database migrations
 dotnet watch run            # Start the backend
 ```
 
-3. Frontend Setup
+### Frontend Setup
 
 Navigate to the /client/ directory and run the following commands:
 

@@ -39,3 +39,45 @@ Accessible only to admins, the worker dashboard page lists all users that are re
 Accessible only to admins, the jobs page lists all jobs that are available and comes with the functionality to delete or add new jobs
 
 ![](/client/src/assets/screenshots/jobs.png)
+
+## Installation & Setup
+
+### Prerequisites
+
+- Node.js (for Angular)
+- Angular CLI
+- .NET SDK 6.0 (for backend)
+- SQL Server
+
+### Backend Setup
+
+1. Configure Database Connection
+
+Navigate to the backend configuration files:
+- project-api/schedule/appsettings.json
+- project-api/schedule/appsettings.development.json
+
+Replace the SQL Server name inside the "ConnectionStrings" section:
+
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "Server=YOUR_SQL_SERVER_NAME; Database=ScheduleDB; Trusted_Connection=True; MultipleActiveResultSets=true"
+},
+```
+
+2. Apply Migrations & Start The Backend
+
+```bash
+dotnet ef database update   # Apply database migrations
+dotnet watch run            # Start the backend
+```
+
+3. Frontend Setup
+
+Navigate to the /client/ directory and run the following commands:
+
+```bash
+npm install     # Install required packages
+ng serve        # Start the frontend
+```
+
